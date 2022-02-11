@@ -6,13 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .success-checkmark:after {
+            content: '✔';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border: 1px solid rgba(173, 216, 230.2);
+            background-color: rgba(173, 216, 230.2);
+            border-radius: 50%;
+        }
+    </style>
 </head>
 
 <body>
-    <table style="border-collapse:collapse;border:1px #E0E0E0 #E0E0E0;background-color:#f0f0f0;">
+    <table style="border-collapse:collapse;border:1px #E0E0E0 #E0E0E0;background-color:#f0f0f0;margin-left: auto;margin-right: auto;">
         <tr>
             <td style="padding: 10px 26px;">
-                <div style="font-size: 48px;text-align: center;color: green;">✔</div>
+                <div class="success-checkmark"></div>
             </td>
             <td style="font-size: 22px;padding-left: 0px;padding-right: 26px;">我不是機器人</td>
             <td style="padding: 10px 26px;">

@@ -9,19 +9,54 @@
 </head>
 
 <body>
-    <table style="border-collapse:collapse;border:1px #E0E0E0 #E0E0E0;background-color:#f0f0f0;">
-        <tr>
-            <td style="padding: 10px 26px;">
-                <button style="width: 32px;height: 32px;background-color: white;" onclick="INR_start()"></button>
-            </td>
-            <td style="font-size: 22px;padding-left: 0px;padding-right: 26px;">
-                <h3>我不是機器人</h3>
-            </td>
-            <td style="padding: 10px 26px;">
-                <img src="img/inr.png" width="70px" height="70px">
-            </td>
-        </tr>
+    <table style="border:3px black solid;">
+        <thead>
+            <tr>
+                <th colspan="4"><img src="img/' + num + '/top.jpg" width="200" height="60"></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(1)" id="INR_img00">
+                    <div style="background-image: url(img/1/00.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;"></div>
+                </td>
+                <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(1)" id="INR_img00">
+                    <div style="background-image: url(img/1/01.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;"></div>
+                </td>
+                <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(1)" id="INR_img00">
+                    <div style="background-image: url(img/1/02.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(1)" id="INR_img00">
+                    <div style="background-image: url(img/1/10.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;"></div>
+                </td>
+                <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(1)" id="INR_img00">
+                    <div style="background-image: url(img/1/11.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;"></div>
+                </td>
+                <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(1)" id="INR_img00">
+                    <div style="background-image: url(img/1/12.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(1)" id="INR_img00">
+                    <div style="background-image: url(img/1/20.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;"></div>
+                </td>
+                <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(1)" id="INR_img00">
+                    <div style="background-image: url(img/1/21.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;"></div>
+                </td>
+                <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(1)" id="INR_img00">
+                    <div style="background-image: url(img/1/22.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;"></div>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4"><img src="img/skipp.jpg" style="padding-right: 10px;padding-left: 65%;cursor: pointer;" width="70" height="30" onclick="INR_verification()" id="ansbotton"></td>
+            </tr>
+        </tfoot>
     </table>
 </body>
+<!--<div style="width: 20px;height: 20px;text-align: center;border: 1px solid rgba(173, 216, 230.2);background-color: rgba(173, 216, 230.2);opacity: .5;border-radius: 50%;color: white;">✔</div>-->
 
 </html>
