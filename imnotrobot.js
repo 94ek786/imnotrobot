@@ -1,7 +1,6 @@
-var num = '1'
-var ver = [
-    [0, 0, 0] * 3
-]
+var num = '1';
+var ver;
+var ans;
 
 function INR_notpass() {
     document.getElementById('imnotrobot').innerHTML = '\
@@ -17,7 +16,7 @@ function INR_notpass() {
                     <img src="img/inr.png" width="70px" height="70px">\
                 </td>\
             </tr>\
-        </table>'
+        </table>';
 };
 
 function INR_pass() {
@@ -32,10 +31,11 @@ function INR_pass() {
                     <img src="img/inr.png" width="70px" height="70px">\
                 </td>\
             </tr>\
-        </table>'
+        </table>';
 };
 
 function INR_start() {
+    ver = [0, 0, 0, 0, 0, 0, 0, 0, 0];
     document.getElementById('imnotrobot').innerHTML = '\
         <table style="border:3px black solid;">\
             <thead>\
@@ -45,59 +45,81 @@ function INR_start() {
             </thead>\
             <tbody>\
                 <tr>\
-                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(\'00\')">\
-                        <div style="background-image: url(img/' + num + '/00.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img00"></div>\
+                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(0)">\
+                        <div style="background-image: url(img/' + num + '/0.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img0"></div>\
                     </td>\
-                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(\'01\')">\
-                        <div style="background-image: url(img/' + num + '/01.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img01"></div>\
+                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(1)">\
+                        <div style="background-image: url(img/' + num + '/1.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img1"></div>\
                     </td>\
-                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(\'02\')">\
-                        <div style="background-image: url(img/' + num + '/02.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img02"></div>\
-                    </td>\
-                </tr>\
-                <tr>\
-                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(10)">\
-                        <div style="background-image: url(img/' + num + '/10.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img10"></div>\
-                    </td>\
-                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(11)">\
-                        <div style="background-image: url(img/' + num + '/11.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img11"></div>\
-                    </td>\
-                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(12)">\
-                        <div style="background-image: url(img/' + num + '/12.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img12"></div>\
+                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(2)">\
+                        <div style="background-image: url(img/' + num + '/2.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img2"></div>\
                     </td>\
                 </tr>\
                 <tr>\
-                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(20)">\
-                        <div style="background-image: url(img/' + num + '/20.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img20"></div>\
+                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(3)">\
+                        <div style="background-image: url(img/' + num + '/3.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img3"></div>\
                     </td>\
-                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(21)">\
-                        <div style="background-image: url(img/' + num + '/21.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img21"></div>\
+                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(4)">\
+                        <div style="background-image: url(img/' + num + '/4.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img4"></div>\
                     </td>\
-                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(22)">\
-                        <div style="background-image: url(img/' + num + '/22.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img22"></div>\
+                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(5)">\
+                        <div style="background-image: url(img/' + num + '/5.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img5"></div>\
+                    </td>\
+                </tr>\
+                <tr>\
+                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(6)">\
+                        <div style="background-image: url(img/' + num + '/6.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img6"></div>\
+                    </td>\
+                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(7)">\
+                        <div style="background-image: url(img/' + num + '/7.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img7"></div>\
+                    </td>\
+                    <td width="60" height="60" style="cursor: pointer;" onclick="INR_pick(8)">\
+                        <div style="background-image: url(img/' + num + '/8.jpg);background-size: contain;background-repeat: no-repeat;width: 60px;height: 60px;" id="INR_img8"></div>\
                     </td>\
                 </tr>\
             </tbody>\
             <tfoot>\
                 <tr>\
-                    <th colspan="4"><img src="img/skipp.jpg" style="padding-right: 10px;padding-left: 65%;cursor: pointer;" width="70" height="30" onclick="INR_verification()" id="ansbotton"></td>\
+                    <th style="cursor: pointer;" colspan="3">\
+                        <div style="float:right;color: white;width: 70px;height: 40px;border-radius: 5px;background: rgba(76, 144, 224);line-height:40px;" onclick="INR_verification()">略過</div>\
+                    </th>\
                 </tr>\
             </tfoot>\
-        </table>'
-}
+        </table>';
+};
 
 function INR_pick(n) {
-    document.getElementById('INR_img' + n).innerHTML = '<div style="width: 20px;height: 20px;text-align: center;border: 1px solid rgba(173, 216, 230.2);background-color: rgba(173, 216, 230.2);opacity: .9;border-radius: 50%;color: white;">✔</div>'
-}
+    if (ver[n] == 0) {
+        document.getElementById('INR_img' + n).innerHTML = '<div style="width: 20px;height: 20px;text-align: center;border: 1px solid rgba(173, 216, 230.2);background-color: rgba(173, 216, 230.2);opacity: .9;border-radius: 50%;color: white;">✔</div>';
+        ver[n] = 1;
+    } else {
+        document.getElementById('INR_img' + n).innerHTML = '';
+        ver[n] = 0;
+    };
+};
+
+function INR_isans() {
+    for (loop = 0; loop < 9; loop++) {
+        if (ver[loop] !== ans[loop]) {
+            return false;
+        };
+    };
+    return true;
+};
 
 function INR_verification() {
-    INR_pass()
+    if (INR_isans()) {
+        INR_pass();
+    } else {
+        INR_notpass();
+    };
 };
 
 function INR_load() {
-    INR_notpass()
+    INR_notpass();
+    ans = [1, 1, 1, 1, 1, 1, 1, 1, 1];
 };
 
 window.onload = function() {
-    INR_load()
+    INR_load();
 };
