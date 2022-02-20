@@ -1,6 +1,6 @@
 var INR_num = '1';
-var INR_ver;
-var INR_ans;
+INR_ans = [1, 1, 1, 1, 1, 1, 1, 1, 1];
+INR_ver = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 function INR_notpass() {
     document.getElementById('imnotrobot').innerHTML = '\

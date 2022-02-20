@@ -7,10 +7,24 @@
     <title>imnotrobot</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script LANGUAGE="JavaScript" src="imnotrobot.js"></script>
+    <script>
+        function tonext() {
+            if (INR_isans()) {
+                window.location.href = 'next.html'
+            } else {
+                document.getElementById('dothething').innerHTML = '尚未進行驗證!';
+            };
+        };
+    </script>
 </head>
 
 <body>
-    <div id="imnotrobot" style="padding-left:30%;"></div>
+    <div style="padding-left:30%;">
+        <div id="imnotrobot"></div>
+        <br>
+        <button onclick="tonext()">下一頁</button>
+        <p id="dothething" style="color: red;"></p>
+    </div>
 </body>
 
 </html>
