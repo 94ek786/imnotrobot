@@ -8,13 +8,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script LANGUAGE="JavaScript" src="imnotrobot.js"></script>
     <script>
+        //判斷是否已通過驗證
         function tonext() {
             if (INR_isans()) {
-                window.location.href = 'next.html'
+                window.location.href = 'next.html';
             } else {
                 document.getElementById('dothething').innerHTML = '尚未進行驗證!';
             };
         };
+        //在通過驗證後會執行該funtion
+        function passINR() {
+            //清除尚未驗證通知
+            document.getElementById('dothething').innerHTML = '';
+        }
     </script>
 </head>
 

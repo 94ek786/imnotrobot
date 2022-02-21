@@ -1,6 +1,7 @@
 var INR_num = '1';
-INR_ans = [1, 1, 1, 1, 1, 1, 1, 1, 1];
-INR_ver = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+var INR_ans = [1, 1, 1, 1, 1, 1, 1, 1, 1];
+var INR_ver = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+
 
 function INR_notpass() {
     document.getElementById('imnotrobot').innerHTML = '\
@@ -113,6 +114,11 @@ function INR_isans() {
 function INR_verification() {
     if (INR_isans()) {
         INR_pass();
+        try {
+            passINR();
+        } catch {
+
+        };
     } else {
         INR_notpass();
     };
