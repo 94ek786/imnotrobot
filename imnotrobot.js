@@ -1,5 +1,5 @@
 var INR_ver = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-var INR_anser = [1, 1, 1, 1, 1, 1, 1, 1, 1];
+var INR_anser = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 var INR_S = 1;
 //import { INR_num, INR_Lockin } from './INR_info.js';
 //console.log(INR_num);
@@ -140,8 +140,12 @@ function INR_load() {
         INR_S = INR_Lockin;
     } else {
         INR_S = Math.floor(Math.random() * INR_num) + 1;
-        console.log('選擇了' + INR_S);
     }
+    console.log('選擇了' + INR_S);
 
-    INR_notpass();
+    fetch('./img/' + INR_S + '/anser.json').then((response) => response.json()).then((json) => {
+        INR_anser = json.anser;
+        console.log(INR_anser);
+        INR_notpass();
+    }).catch(function() { document.getElementById('imnotrobot').innerHTML = '題庫' + INR_S + '出現了錯誤無anser.json檔案'; });
 };
