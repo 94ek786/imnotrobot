@@ -146,6 +146,11 @@ function INR_load() {
     fetch('./img/' + INR_S + '/anser.json').then((response) => response.json()).then((json) => {
         INR_anser = json.anser;
         console.log(INR_anser);
+        for (i = 0; i < 9; i++) {
+            if (typeof INR_anser[i] === 'undefined') {
+                adddlert("create error");
+            }
+        }
         INR_notpass();
-    }).catch(function() { document.getElementById('imnotrobot').innerHTML = '題庫' + INR_S + '出現了錯誤無anser.json檔案'; });
+    }).catch(function() { document.getElementById('imnotrobot').innerHTML = '題庫' + INR_S + '的anser.json出現了錯誤或者無anser.json檔案'; });
 };
